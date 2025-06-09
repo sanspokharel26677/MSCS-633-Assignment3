@@ -1,0 +1,57 @@
+Manifest File - MSCS-633-Assignment3: Terminal Q&A Chatbot
+
+Author: Sandesh Pokharel
+Course: MSCS-633 - Advanced Artificial Intelligence
+Project Title: Terminal Q&A Chatbot using Django and ChatterBot
+Submission Type: Hands-On Assignment 3
+
+----------------------------------------
+Project Description:
+This project implements a simple terminal-based chatbot using Django and ChatterBot. The bot is trained on English corpus data and interacts with users through a custom Django management command.
+
+----------------------------------------
+Included Files and Description:
+
+1. chatbot_project/
+   ├── __init__.py
+   ├── settings.py            - Django settings file (app registered here)
+   ├── urls.py                - URL config (not used in terminal chatbot)
+   └── wsgi.py & asgi.py      - WSGI/ASGI entry points
+
+2. chat/
+   ├── __init__.py
+   ├── admin.py
+   ├── apps.py
+   ├── chatbot.py             - Defines and trains the chatbot using ChatterBotCorpusTrainer
+   ├── models.py
+   ├── tests.py
+   ├── views.py
+   └── management/commands/chat.py
+       - Custom Django command to chat via terminal
+
+3. manage.py                  - Django’s command-line utility
+
+4. README.md                  - Project overview, setup, features, and usage instructions
+5. manifest.txt               - This file
+
+----------------------------------------
+Setup Instructions:
+- Python Version: 3.10
+- Virtual Environment: chatbot_env
+- Dependencies:
+  - django
+  - git+https://github.com/gunthercox/ChatterBot.git@master
+  - chatterbot_corpus
+  - pyyaml
+  - spacy + en_core_web_sm model
+
+----------------------------------------
+How to Run:
+- Activate virtual environment
+- Run: `python manage.py migrate`
+- Run: `python manage.py chat`
+
+----------------------------------------
+Notes:
+- The chatbot uses SQLite for persistent training data.
+- Screenshot of terminal chat is provided in submission document.
