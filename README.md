@@ -65,13 +65,6 @@ MSCS-633-Assignment3/
 
 ---
 
-## 🖼️ Screenshot
-
-> 📸 **[Insert your screenshot here]**  
-_Terminal output showing a conversation with the chatbot_
-
----
-
 ## 🧠 Sample Interaction
 
 ```
